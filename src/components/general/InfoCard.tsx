@@ -21,9 +21,10 @@ const InfoCard: FC<InfoCardProps> = ({
     >
       <div>
         <img
+          loading="lazy"
           src={image}
           alt={title}
-          className="rounded-[15px] w-[515px] h-[300px] min-w-[415px] min-h-[360px] object-cover"
+          className="rounded-[15px] w-[515px] h-[290.1px] min-w-[415px] min-h-[360px] object-cover"
         />
       </div>
       <div className="w-full max-w-[634px]">
