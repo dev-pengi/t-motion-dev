@@ -34,13 +34,8 @@ const InfoCard: FC<InfoCardProps> = ({
           placeholder="blur"
           blurDataURL={blurData}
           alt={title}
-          style={{
-            objectFit: "cover",
-            width: "100%",
-            maxWidth: "490px",
-            height: "auto",
-          }}
-          className="rounded-[15px] object-cover"
+          style={{}}
+          className="rounded-[15px] vlg:min-w-[490px] lg:min-w-[390px] w-full max-w-[490px] h-auto object-cover"
         />
       </div>
       <div className="w-full max-w-[634px] lg:text-start text-center">

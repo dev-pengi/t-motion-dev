@@ -6,7 +6,7 @@ import NavBar from "../general/NavBar";
 const Hero: FC = () => {
   return (
     <section className="relative">
-      <Container className="flex items-center justify-between pt-[32px] pb-[32px] z-10 relative">
+      <Container className="flex items-center justify-between pt-[32px] pb-[32px] z-1 relative">
         <div>
           <h1 className="lg:max-w-[587px] text-[42px] vlg:text-[54px] font-[600]">
             Even the greatest innovations, started with an idea

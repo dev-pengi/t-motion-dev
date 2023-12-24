@@ -19,34 +19,34 @@ const About: FC = () => {
             painful process!
           </p>
           <div className="mt-[26px] flex gap-[26px] items-center flex-wrap">
-            <div className="md:px-4 px-2 py-6 bg-white w-full md:max-w-[224px] rounded-[32px] shadow-cards">
-              <div className="h-full flex flex-col justify-between">
+            <div className="vmd:px-4 px-5 py-6 bg-white w-full vmd:max-w-[224px] vmd:rounded-[32px] rounded-[16px] shadow-cards">
+              <div className="h-full flex vmd:flex-col flex-row vmd:justify-between vmd:items-start items-center">
                 <div>
-                  <img src="/purple-heart.svg" />
+                  <img src="/purple-heart.svg" className="w-full h-auto max-w-[60px] min-w-[60px]"/>
                 </div>
-                <p className="font-[100] mt-8">
+                <p className="font-[100] vmd:mt-8 vmd:ml-0 ml-3">
                   leave the nerdy stuff to us, while you focus on being
                   innovative
                 </p>
               </div>
             </div>
-            <div className="md:px-4 px-2 py-6 bg-white  w-full md:max-w-[224px] rounded-[32px] shadow-cards">
-              <div className="h-full flex flex-col justify-between">
+            <div className="vmd:px-4 px-5 py-6 bg-white  w-full vmd:max-w-[224px] vmd:rounded-[32px] rounded-[16px] shadow-cards">
+              <div className="h-full flex vmd:flex-col flex-row vmd:justify-between vmd:items-start items-center">
                 <div>
-                  <img src="/yellow-heart.svg" />
+                  <img src="/yellow-heart.svg" className="w-full h-auto max-w-[60px] min-w-[60px]"/>
                 </div>
-                <p className="font-[100] mt-8">
+                <p className="font-[100] vmd:mt-8 vmd:ml-0 ml-3">
                   we handle all the technical side from the notes taking, to
                   production
                 </p>
               </div>
             </div>
-            <div className="md:px-4 px-2 py-6 bg-white  w-full md:max-w-[224px] rounded-[32px] shadow-cards">
-              <div className="h-full flex flex-col justify-between">
+            <div className="vmd:px-4 px-5 py-6 bg-white  w-full vmd:max-w-[224px] vmd:rounded-[32px] rounded-[16px] shadow-cards">
+              <div className="h-full flex vmd:flex-col flex-row vmd:justify-between vmd:items-start items-center">
                 <div>
-                  <img src="/blue-heart.svg" />
+                  <img src="/blue-heart.svg" className="w-full h-auto max-w-[60px] min-w-[60px]"/>
                 </div>
-                <p className="font-[100] mt-8">
+                <p className="font-[100] vmd:mt-8 vmd:ml-0 ml-3">
                   your success is our ultimate goal, no bosses to satisfy. only
                   you
                 </p>
@@ -56,7 +56,7 @@ const About: FC = () => {
         </div>
         <div className="flex-1 h-full relative testimonials z-1 vlg:mt-0 mt-9">
           <div className="w-full max-h-[500px] overflow-hidden z-0 relative">
-            <div className="md:px-4 px-2 w-full flex flex-col gap-[15px] testimonials-scroller z-0 relative">
+            <div className="vmd:px-4 px-2 w-full flex flex-col gap-[15px] testimonials-scroller z-0 relative">
               {testimonials.map((testimony, index) => (
                 <TestimonialCard
                   key={`${testimony.name}-${index}`}

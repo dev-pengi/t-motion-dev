@@ -5,7 +5,7 @@ export default {
     extend: {
       screens: {
         vsm: "600px",
-        vmd: "700px",
+        vmd: "800px",
         vlg: "1224px",
       },
       colors: {

@@ -83,30 +83,34 @@ const Footer: FC = () => {
             © Copyright T Motion Dev {now.getFullYear()}. All rights reserved.
           </p>
           <div className="flex items-center justify-center gap-[20px] text-[20px]">
-            <Link
-              href="facebook.com/tmotiondev"
+            <a
+              href="https://facebook.com/tmotiondev"
+              target="_blank"
               className="hover:-translate-y-1 duration-200"
             >
               <FacebookIcon />
-            </Link>
-            <Link
-              href="instagram.com/tmotiondev"
+            </a>
+            <a
+              href="https://instagram.com/tmotiondev"
+              target="_blank"
               className="hover:-translate-y-1 duration-200"
             >
               <InstagramIcon />
-            </Link>
-            <Link
-              href="twitter.com/tmotiondev"
+            </a>
+            <a
+              href="https://twitter.com/tmotiondev"
+              target="_blank"
               className="hover:-translate-y-1 duration-200"
             >
               <TwitterIcon />
-            </Link>
-            <Link
-              href="linkedin.com/company/tmotion"
+            </a>
+            <a
+              href="https://linkedin.com/company/tmotion"
+              target="_blank"
               className="hover:-translate-y-1 duration-200"
             >
               <LinkedinIcon />
-            </Link>
+            </a>
           </div>
         </div>
       </Container>
