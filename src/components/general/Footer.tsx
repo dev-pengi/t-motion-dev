@@ -13,7 +13,7 @@ const Footer: FC = () => {
   const now = new Date();
 
   return (
-    <footer className="bg-dark py-[120px] text-white">
+    <footer className="bg-dark md:py-[120px] py-[60px] text-white">
       <Container>
         <div className="flex justify-between items-start gap-[64px] lg:flex-row flex-col">
           <div className="">
