@@ -62,7 +62,7 @@ const NavBar: FC = () => {
         <div>
           <div
             ref={wrapperRef}
-            className={`md:hidden block text-[32px] ${
+            className={`md:hidden block text-[32px] cursor-pointer ${
               isNavOpened ? "text-primary" : "text-dark"
             }`}
             onClick={handleNavToggle}
