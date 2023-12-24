@@ -6,8 +6,8 @@ import { testimonials } from "@/constants";
 const About: FC = () => {
   return (
     <section className="bg-light-gray">
-      <Container className="py-[32px] flex vlg:items-center items-start vlg:flex-row flex-col">
-        <div>
+      <Container className="py-[32px] flex gap-6 vlg:items-center items-start vlg:flex-row flex-col">
+        <div >
           <h2 className="font-[600] text-[32px]">
             We convert your view to success
           </h2>
