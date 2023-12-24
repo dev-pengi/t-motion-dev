@@ -6,6 +6,7 @@ export default {
       screens: {
         vsm: "600px",
         vmd: "700px",
+        vlg: "1224px",
       },
       colors: {
         primary: "#9E00FF",

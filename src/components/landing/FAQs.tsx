@@ -6,7 +6,11 @@ import FAQcard from "../general/FAQcard";
 import Button from "../general/Button";
 import Link from "next/link";
 
-const FAQs: FC = () => {
+interface FAQsProps {
+  isFull?: boolean;
+}
+
+const FAQs: FC<FAQsProps> = ({ isFull }) => {
   const [isOpened, setIsOpened] = useState<number | null>(null);
   const handleIsOpened = (index: number) => {
     setIsOpened((prev) => {
@@ -14,27 +18,34 @@ const FAQs: FC = () => {
       else return index;
     });
   };
+
   return (
     <section>
       <Container className="py-6">
         <div className="flex items-center justify-center">
-          <h2 className="font-[600] text-[32px]">Frequently asked questions</h2>
+          <h2 className="font-[600] text-[32px] text-center">
+            Frequently asked questions
+          </h2>
         </div>
-        <div className="mt-12 flex flex-col items-center gap-[15px]">
-          {faqs.map((question, index) => (
-            <FAQcard
-              {...question}
-              isOpened={isOpened === index}
-              onOpen={() => handleIsOpened(index)}
-              key={`${question.question}-${index}`}
-            />
-          ))}
+        <div className="py-9 flex flex-col items-center gap-[15px]">
+          {faqs
+            .filter((question) => question.category === "main")
+            .map((question, index) => (
+              <FAQcard
+                {...question}
+                isOpened={isOpened === index}
+                onOpen={() => handleIsOpened(index)}
+                key={`${question.question}-${index}`}
+              />
+            ))}
         </div>
-        <div className="flex mt-6 items-center justify-center">
-          <Link href="/faq">
-            <Button>Learn More</Button>
-          </Link>
-        </div>
+        {!isFull && (
+          <div className="flex items-center justify-center">
+            <Link href="/faqs">
+              <Button>Learn More</Button>
+            </Link>
+          </div>
+        )}
       </Container>
     </section>
   );

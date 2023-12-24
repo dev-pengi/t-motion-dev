@@ -1,12 +1,18 @@
-import { Hero, About, Info, FAQs } from "@/components";
+import { Hero, About, Info, FAQs, NavBar, Footer } from "@/components";
+import MeshBg from "@/components/general/MeshBg";
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <div className="relative">
+        <MeshBg />
+        <NavBar />
+        <Hero />
+      </div>
       <About />
       <Info />
       <FAQs />
+      <Footer />
     </>
   );
 }

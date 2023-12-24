@@ -7,7 +7,7 @@ interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 
 const Container: FC<ContainerProps> = ({ children, className, ...props }) => {
   return (
-    <div className={`max-w-[1355px] mx-auto px-3 ${className}`} {...props}>
+    <div className={`max-w-[1355px] mx-auto vlg:px-3 md:px-9 px-4 ${className}`} {...props}>
       {children}
     </div>
   );
