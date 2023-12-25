@@ -72,7 +72,7 @@ const NavBar: FC = () => {
 
           <div
             className={`fixed w-full left-0 h-max py-6 px-3 bg-dark z-10 rounded-t-xl duration-200 ${
-              isNavOpened ? "-bottom-0.5" : "-bottom-full"
+              isNavOpened ? "md:-bottom-full -bottom-0.5" : "-bottom-full"
             }`}
           >
             <ul className="gap-5 flex flex-col justify-center items-center text-center text-white">

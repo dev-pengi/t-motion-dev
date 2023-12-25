@@ -2,6 +2,7 @@
 import { FC, useState } from "react";
 import Image from "next/image";
 import { getBlurUrl } from "@/utils";
+import Reveal from "./Reveal";
 
 interface InfoCardProps {
   title: string;
@@ -20,7 +21,9 @@ const InfoCard: FC<InfoCardProps> = ({
 }) => {
   const [blurData] = useState(getBlurUrl(blurhash));
   return (
-    <div
+    <Reveal
+      delay={0.15}
+      duration={0.4}
       className={`py-[42px] flex justify-around items-center gap-6 flex-col ${
         reverse ? "lg:flex-row-reverse" : "lg:flex-row"
       }`}
@@ -46,7 +49,7 @@ const InfoCard: FC<InfoCardProps> = ({
           {description}
         </p>
       </div>
-    </div>
+    </Reveal>
   );
 };
 

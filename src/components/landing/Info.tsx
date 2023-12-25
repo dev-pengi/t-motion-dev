@@ -8,7 +8,9 @@ const Info: FC = () => {
     <section>
       <Container>
         <div className="flex items-center mt-6 justify-center">
-          <h2 className="font-[600] text-[32px] text-center">What do we have to offer?</h2>
+          <h2 className="font-[600] text-[32px] text-center">
+            What do we have to offer?
+          </h2>
         </div>
         <div className="mt-12">
           {infos.map((info, index) => (

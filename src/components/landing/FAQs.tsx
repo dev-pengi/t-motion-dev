@@ -5,6 +5,7 @@ import { faqs } from "@/constants";
 import FAQcard from "../general/FAQcard";
 import Button from "../general/Button";
 import Link from "next/link";
+import Reveal from "../general/Reveal";
 
 interface FAQsProps {
   isFull?: boolean;
@@ -20,34 +21,36 @@ const FAQs: FC<FAQsProps> = ({ isFull }) => {
   };
 
   return (
-    <section>
-      <Container className="py-6">
-        <div className="flex items-center justify-center">
-          <h2 className="font-[600] text-[32px] text-center">
-            Frequently asked questions
-          </h2>
-        </div>
-        <div className="py-9 flex flex-col items-center gap-[15px]">
-          {faqs
-            .filter((question) => question.category === "main")
-            .map((question, index) => (
-              <FAQcard
-                {...question}
-                isOpened={isOpened === index}
-                onOpen={() => handleIsOpened(index)}
-                key={`${question.question}-${index}`}
-              />
-            ))}
-        </div>
-        {!isFull && (
+    <Reveal delay={0.15} duration={0.4}>
+      <section>
+        <Container className="py-6">
           <div className="flex items-center justify-center">
-            <Link href="/faqs">
-              <Button>Learn More</Button>
-            </Link>
+            <h2 className="font-[600] text-[32px] text-center">
+              Frequently asked questions
+            </h2>
           </div>
-        )}
-      </Container>
-    </section>
+          <div className="py-9 flex flex-col items-center gap-[15px]">
+            {faqs
+              .filter((question) => question.category === "main")
+              .map((question, index) => (
+                <FAQcard
+                  {...question}
+                  isOpened={isOpened === index}
+                  onOpen={() => handleIsOpened(index)}
+                  key={`${question.question}-${index}`}
+                />
+              ))}
+          </div>
+          {!isFull && (
+            <div className="flex items-center justify-center">
+              <Link href="/faqs">
+                <Button>Learn More</Button>
+              </Link>
+            </div>
+          )}
+        </Container>
+      </section>
+    </Reveal>
   );
 };
 
