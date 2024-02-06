@@ -6,6 +6,7 @@ import FAQcard from "../general/FAQcard";
 import Button from "../general/Button";
 import Link from "next/link";
 import Reveal from "../general/Reveal";
+import { motion } from "framer-motion";
 
 interface FAQsProps {
   isFull?: boolean;
@@ -21,8 +22,8 @@ const FAQs: FC<FAQsProps> = ({ isFull }) => {
   };
 
   return (
-    <Reveal delay={0.15} duration={0.4}>
-      <section>
+    <section>
+      <Reveal delay={0.15} duration={0.4}>
         <Container className="py-6">
           <div className="flex items-center justify-center">
             <h2 className="font-[600] text-[32px] text-center">
@@ -49,8 +50,8 @@ const FAQs: FC<FAQsProps> = ({ isFull }) => {
             </div>
           )}
         </Container>
-      </section>
-    </Reveal>
+      </Reveal>
+    </section>
   );
 };
 

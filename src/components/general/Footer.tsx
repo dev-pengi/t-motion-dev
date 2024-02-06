@@ -8,12 +8,15 @@ import {
 import Link from "next/link";
 import { FC, useState } from "react";
 import Container from "./Container";
+import { motion } from "framer-motion";
 
 const Footer: FC = () => {
   const now = new Date();
 
   return (
-    <footer className="bg-dark md:py-[120px] py-[60px] text-white">
+    <footer
+      className="bg-dark md:py-[120px] py-[60px] text-white"
+    >
       <Container>
         <div className="flex justify-between items-start gap-[64px] lg:flex-row flex-col">
           <div className="">
